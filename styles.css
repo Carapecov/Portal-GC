@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+.hamburger span {
+  background: #fff;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.menu {
+  display: none;
+  background: #333;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  padding: 15px 0;
+}
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+article h3 {
+  padding: 10px;
+  color: #333;
+}
+article p {
+  padding: 0 10px 10px;
+}
+article a {
+  display: inline-block;
+  padding: 10px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+article a:hover {
+  background: #0056b3;
+}
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+body.dark-mode header {
+  background: #1f1f1f;
+}
+body.dark-mode .menu {
+  background: #1f1f1f;
+}
+body.dark-mode article {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
